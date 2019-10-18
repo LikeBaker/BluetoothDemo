@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".BluetoothLeScannerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_ble_scan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="搜索"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="16dp"
+            android:onClick="scan"/>
+
+        <Button
+            android:id="@+id/btn_ble_stop_scan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="停止搜索"
+            android:textColor="@android:color/white"
+            android:onClick="cancelScan"/>
+
+    </LinearLayout>
+
+    <view class="androidx.appcompat.app.AlertController$RecycleListView"
+        android:id="@+id/rv"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </view>
+
+</LinearLayout>
